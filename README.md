@@ -1,5 +1,12 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
+**Seblito** is a Wordpress theme development boiler plate project based on the starter theme Underscores. Both Bootstrap 5 and @wordpress/scripts are implemented. All that's needed is to:
+
+1. clone or download the project
+2. run npm install
+
+You can find detailed instructions for the Underscores theme down below.
+
 _s
 ===
 
