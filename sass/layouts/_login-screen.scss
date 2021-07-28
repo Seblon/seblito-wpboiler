@@ -1,0 +1,40 @@
+body.login {
+    background-color: #1c1422;
+}
+
+.login h1 a {
+    background-image: none, url('/wp-content/themes/seblito/images/svg/logo.svg');
+    background-size: 6.25rem auto;
+    background-position: center;
+    background-repeat: none;
+    width: 6.25rem;
+}
+
+.login form {
+    background-color: #a2cacf;
+}
+
+body.login .button-primary {
+    background-color: #f16283;
+    border-color: #ef476f;
+    text-shadow: none;
+    box-shadow: 0 1px 0 rgba(0,0,0, .24);
+  }
+  
+  body.login .button-primary:active,
+  body.login .button-primary:focus,
+  body.login .button-primary:hover {
+    background-color: #ef476f;
+    border-color: #ef476f;
+    text-shadow: none;
+    box-shadow: 0 1px 0 rgba(117, 34, 54, .24);
+  }
+
+.login #nav a, .login p#backtoblog a {
+    color: $gray-100;
+}
+
+.login #login_error, .login .message, .login .success {
+    border-left: 4px solid #f4743b;
+    background-color: #a2cacf;
+}

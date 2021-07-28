@@ -1,0 +1,108 @@
+/*!
+Theme Name: Seblito
+Theme URI: http://underscores.me/
+Author: Sebastian Bernhardtz
+Author URI: http://underscores.me/
+Description: Seblito is a Wordpress theme development boiler plate project based on the starter theme Underscores. Both Bootstrap 5 and @wordpress/scripts are implemented. All that's needed is to clone or download the project. 
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: seblito
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, bootstrap-5, @wordpress-scripts
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Seblito is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Bootstrap
+	- All of Bootstrap styles
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+# Layouts
+	- Custom login screen
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Import Bootstrap
+--------------------------------------------------------------*/
+@import "bootstrap-sass/bootstrap";
+
+// Import variables and mixins.
+@import "abstracts/abstracts";
+
+/*--------------------------------------------------------------
+# Base and subdirectories
+--------------------------------------------------------------*/
+@import "base/images";
+@import "base/typography/typography";
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+@import "layouts/footer";
+@import "layouts/login-screen";
+@import "layouts/header-images";
+// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
+// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/comments/comments";
+@import "components/content/posts-and-pages";
+@import "components/navigation/navigation";
+@import "components/media/captions";
+@import "components/media/galleries";
+@import "components/media/media";
+@import "components/media/captions";
+@import "components/media/galleries";
+@import "components/widgets/widgets";
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+// Jetpack infinite scroll
+//@import "plugins/jetpack/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+
+/* Accessibility
+--------------------------------------------- */
+@import "utilities/accessibility";
+
+/* Alignments
+--------------------------------------------- */
+@import "utilities/alignments";
