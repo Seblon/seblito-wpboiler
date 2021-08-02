@@ -3,7 +3,7 @@
 **Seblito** is a Wordpress theme development boiler plate project based on the starter theme Underscores. Both Bootstrap 5 and @wordpress/scripts are implemented. All that's needed is to:
 
 1. clone or download the project
-2. run npm install
+2. run `npm ci` (in favor of npm install) in order to install all dependencies without mutating the package-lock.json file.
 
 You can find detailed instructions for the Underscores theme down below.
 
