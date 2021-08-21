@@ -159,7 +159,7 @@ function seblito_scripts()
     wp_enqueue_style('seblito-styles', get_theme_file_uri('/build/style-index.css'));
     // wp_style_add_data('seblito-style', 'rtl', 'replace');
 
-    wp_enqueue_script('seblito-main-js', get_theme_file_uri('/build/index.js'), array(), '1.0', null);
+    wp_enqueue_script('seblito-main-js', get_theme_file_uri('/build/index.js'), null, '1.0', true);
     wp_enqueue_script('seblito-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -186,9 +186,9 @@ if (defined('JETPACK__VERSION')) {
 }
 
 /*
-/***************************
-/ Customizing Login screen
-/***************************
+|***************************
+| Customizing Login screen
+|***************************
 */
 
 // Custom Login screen URL

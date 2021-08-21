@@ -1,0 +1,41 @@
+/* This file has been commented out in style.scss */
+
+.main-title {
+   margin-top: 6rem;
+   margin-left: 2rem;
+}
+
+section {
+   padding: 5rem 0;
+   background: #0c081b;
+   color: $light;
+}
+
+.above-cols {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 50vh;
+   background-color: #1d173b;
+}
+
+.cool-text {
+   font-size: 6rem;
+   color: #ca7b38;
+}
+
+.col {
+   padding: 2rem;
+   opacity: 0;
+   transform: scale(1.1) translateY(24px);
+
+   &--hidden {
+      opacity: 0;
+      transition: opacity 2s ease-out, transform 2s ease-out;
+   }
+
+   &--is-visible {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+   }
+}

@@ -3,14 +3,14 @@ Theme Name: Seblito
 Theme URI: http://underscores.me/
 Author: Sebastian Bernhardtz
 Author URI: http://underscores.me/
-Description: Seblito is a Wordpress theme development boiler plate project based on the starter theme Underscores. Both Bootstrap 5 and @wordpress/scripts are implemented. All that's needed is to clone or download the project.
+Description: Seblito is a Wordpress theme development boiler plate project based on the starter theme Underscores. Both Bootstrap 5 and @wordpress/scripts are implemented. All that's needed is to clone or download the project. 
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: seblito
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, bootstrap-5, @wordpress-scripts
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
@@ -34,7 +34,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Elements
 	- Links
 	- Forms
-## Layouts
+# Layouts
+	- Custom login screen
 # Components
 	- Navigation
 	- Posts and pages
@@ -10331,6 +10332,202 @@ fieldset:disabled .btn {
 /*--------------------------------------------------------------
 # Base and subdirectories
 --------------------------------------------------------------*/
+#our-team {
+	background: #fff;
+	padding: 4rem 0 2rem;
+}
+
+@media (min-width: 768px) {
+	#our-team {
+		margin: 10px 20px;
+	}
+}
+
+#our-team .row .col-2 {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	#our-team .row .col-2 {
+		display: flex;
+	}
+}
+
+#our-team .our-team .profile {
+	display: flex;
+	flex-direction: column;
+}
+
+#our-team .our-team .profile__box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 10rem;
+	margin-bottom: 3rem;
+}
+
+#our-team .our-team .profile__img-wrapper {
+	width: 8rem;
+	height: 8rem;
+	border-radius: 50rem;
+	overflow: hidden;
+	box-shadow: 0 -0.35rem 0 0 #ef4b91;
+}
+
+@media (min-width: 768px) {
+	#our-team .our-team .profile__img-wrapper {
+		width: 10.5rem;
+		height: 10.5rem;
+		box-shadow: 0 -0.5rem 0 0 #ef4b91;
+	}
+}
+
+#our-team .our-team .profile__img {
+	object-fit: cover;
+}
+
+#our-team .our-team .profile__details {
+	display: flex;
+	flex-direction: column;
+	min-width: 100%;
+	margin-top: 1rem;
+	font-family: "Poppins", var(--bs-font-sans-serif);
+	font-size: 0.8rem;
+	letter-spacing: 2px;
+	color: #333;
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	#our-team .our-team .profile__details {
+		font-size: 0.9rem;
+	}
+}
+
+#our-team .our-team .profile__details__name {
+	font-weight: 600;
+	margin-bottom: 0.25rem;
+	flex: 1;
+}
+
+@media (min-width: 576px) {
+	#our-team .our-team .profile__details__name {
+		margin-bottom: 0.5rem;
+	}
+}
+
+#our-team .our-team .profile__details__name__link {
+	color: #333;
+	transition: all 0.2s ease;
+	position: relative;
+	padding: 4px 8px;
+}
+
+@media (min-width: 992px) {
+	#our-team .our-team .profile__details__name__link:hover {
+		text-decoration: none;
+	}
+	#our-team .our-team .profile__details__name__link::before, #our-team .our-team .profile__details__name__link::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 100%;
+	}
+	#our-team .our-team .profile__details__name__link::before {
+		top: 0;
+		height: 100%;
+		z-index: -1;
+		background-color: #efadce;
+		transition: all 0.15s ease;
+		transform: scaleY(0);
+		transform-origin: bottom;
+	}
+	#our-team .our-team .profile__details__name__link::after {
+		bottom: 0;
+		height: 2px;
+		transition: all 0.15s ease 0.15s;
+		background-color: #ef4b91;
+		transform: scaleX(0);
+		transform-origin: center;
+	}
+	#our-team .our-team .profile__details__name__link:hover.profile__details__name__link::before {
+		transform: scaleY(1);
+		transition: transform 0.15s ease 0.3s;
+	}
+	#our-team .our-team .profile__details__name__link:hover.profile__details__name__link::after {
+		transform: scaleX(1);
+	}
+}
+
+#our-team .our-team .profile__details__job-title {
+	font-weight: 400;
+	margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+	#our-team .our-team .profile__details__job-title {
+		color: #1a1a1a;
+	}
+}
+
+#our-team .our-team .profile__details__social-icons {
+	display: flex;
+	justify-content: center;
+}
+
+#our-team .our-team .profile__details__social-icons .profile__social-link span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #e6dfe2;
+	border-radius: 100%;
+	padding: 10px;
+}
+
+#our-team .our-team .profile__details__social-icons .profile__social-link + .profile__social-link {
+	margin-left: 1.25rem;
+}
+
+#our-team .our-team .profile__details__social-icons #linkedin-icon,
+#our-team .our-team .profile__details__social-icons #email-icon {
+	height: 1.1rem;
+}
+
+#our-team .our-team .profile__details__social-icons .linkedin,
+#our-team .our-team .profile__details__social-icons .email {
+	width: 2.5rem;
+	height: 2.5rem;
+	line-height: 1;
+}
+
+#our-team .our-team .profile__details__social-icons .profile__social-link {
+	transition: all 0.2s ease;
+	border-radius: 100%;
+}
+
+#our-team .our-team .profile__details__social-icons .profile__social-link:hover {
+	transform: scale(1.02) translateY(-1px);
+	background-color: #ef4b91;
+	box-shadow: 0 1px 10px rgba(85, 85, 85, 0.2);
+}
+
+#our-team .our-team .profile__details__social-icons .profile__social-link:hover #linkedin-icon .linkedin-icon-color,
+#our-team .our-team .profile__details__social-icons .profile__social-link:hover #email-icon .email-icon-color {
+	fill: #fff;
+}
+
+@media (min-width: 768px) {
+	#our-team {
+		margin-bottom: 1.25rem;
+	}
+}
+
+@media (min-width: 992px) {
+	#our-team {
+		padding: 4rem 0;
+	}
+}
+
 .custom-logo {
 	width: 6.25rem;
 	height: 30px;
@@ -10340,15 +10537,66 @@ fieldset:disabled .btn {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.seblito-footer {
+	background-color: #1c1422;
+	color: #fff;
+	padding: 3em 0;
+	margin-bottom: -1.5rem;
+}
+
 body.login {
-	background-color: #0e0819;
+	background-color: #1c1422;
 }
 
 .login h1 a, .login .h1 a {
 	background-image: none, url("/wp-content/themes/seblito/images/svg/logo.svg");
-	background-size: 84px auto;
-	background-position: center top;
+	background-size: 6.25rem auto;
+	background-position: center;
 	background-repeat: none;
+	width: 6.25rem;
+}
+
+.login form {
+	background-color: #a2cacf;
+}
+
+body.login .button-primary {
+	background-color: #f16283;
+	border-color: #ef476f;
+	text-shadow: none;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.24);
+}
+
+body.login .button-primary:active,
+body.login .button-primary:focus,
+body.login .button-primary:hover {
+	background-color: #ef476f;
+	border-color: #ef476f;
+	text-shadow: none;
+	box-shadow: 0 1px 0 rgba(117, 34, 54, 0.24);
+}
+
+.login #nav a, .login p#backtoblog a {
+	color: #f8f9fa;
+}
+
+.login #login_error, .login .message, .login .success {
+	border-left: 4px solid #f4743b;
+	background-color: #a2cacf;
+}
+
+.fullwidth-header-image {
+	max-width: 100%;
+	max-height: 50vh;
+	overflow-y: hidden;
+}
+
+.fullwidth-header-image img {
+	display: block;
+	max-width: 100%;
+	height: 50vh;
+	object-fit: cover;
+	object-position: center;
 }
 
 /*--------------------------------------------------------------
@@ -10635,6 +10883,46 @@ body.login {
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
+.main-title {
+	margin-top: 6rem;
+	margin-left: 2rem;
+}
+
+section {
+	padding: 5rem 0;
+	background: #0c081b;
+	color: #f8f9fa;
+}
+
+.above-cols {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 50vh;
+	background-color: #1d173b;
+}
+
+.cool-text {
+	font-size: 6rem;
+	color: #ca7b38;
+}
+
+.col {
+	padding: 2rem;
+	opacity: 0;
+	transform: scale(1.1) translateY(24px);
+}
+
+.col--hidden {
+	opacity: 0;
+	transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.col--is-visible {
+	opacity: 1;
+	transform: scale(1) translateY(0);
+}
+
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/

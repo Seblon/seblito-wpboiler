@@ -64,6 +64,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Base and subdirectories
 --------------------------------------------------------------*/
+@import "base/general";
 @import "base/images";
 @import "base/typography/typography";
 
@@ -94,6 +95,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 // Jetpack infinite scroll
 //@import "plugins/jetpack/infinite-scroll";
+// @import "plugins/reveal-on-scroll";
 
 /*--------------------------------------------------------------
 # Utilities

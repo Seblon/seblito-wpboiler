@@ -32,7 +32,7 @@
 
 			<!-- Start Bootstrap Navigation bar -->
 
-			<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+			<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
 				<div class="container">
 
 					<?php if (function_exists('the_custom_logo') && has_custom_logo()) : the_custom_logo();

@@ -1,3 +1,189 @@
-body {
-    background-color: $white;
+$sgit-pink: #ef4b91;
+$black-500: #333;
+$black-200: #1a1a1a;
+$black-900: rgb(85, 85, 85);
+
+.sep-row {
+	display: block;
+}
+
+#our-team {
+	padding: 4rem 0 2rem;
+
+	@include media-breakpoint-up(md) {
+		margin: 10px 20px;
+	}
+
+	.row .col-2 {
+		display: none;
+
+		@include media-breakpoint-up(md) {
+			display: flex;
+		}
+	}
+
+	& .our-team {
+		& .profile {
+			display: flex;
+			flex-direction: column;
+
+			&__box {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				min-width: 10rem;
+				margin-bottom: 3rem;
+			}
+			&__img-wrapper {
+				width: 8rem;
+				height: 8rem;
+				border-radius: 50rem;
+				overflow: hidden;
+				box-shadow: 0 -0.35rem 0 0 $sgit-pink;
+
+				@include media-breakpoint-up(md) {
+					width: 10.5rem;
+					height: 10.5rem;
+					box-shadow: 0 -0.5rem 0 0 $sgit-pink;
+				}
+			}
+			&__img {
+				object-fit: cover;
+        max-width: 100%;
+			}
+
+			&__details {
+				display: flex;
+				flex-direction: column;
+				min-width: 100%;
+				margin-top: 1rem;
+				font-family: "Poppins", $font-family-base;
+				font-size: 0.8rem;
+				letter-spacing: 2px;
+				color: #333;
+				text-align: center;
+
+				@include media-breakpoint-up(md) {
+					font-size: 0.9rem;
+				}
+
+				&__name {
+					font-weight: 600;
+					margin-bottom: 0.25rem;
+					flex: 1;
+
+					@include media-breakpoint-up(sm) {
+						margin-bottom: 0.5rem;
+					}
+
+					&__link {
+						color: $black-500;
+						transition: all 0.2s ease;
+						position: relative;
+						padding: 4px 8px;
+            text-decoration: none;
+
+						@include media-breakpoint-up(lg) {
+							&:hover {
+								text-decoration: none;
+							}
+							&::before,
+							&::after {
+								content: "";
+								position: absolute;
+								left: 0;
+								width: 100%;
+							}
+							&::before {
+								top: 0;
+								height: 100%;
+								z-index: -1;
+								background-color: $pink-200;
+								transition: all 0.15s ease;
+								transform: scaleY(0);
+								transform-origin: bottom;
+							}
+							&::after {
+								bottom: 0;
+								height: 2px;
+								transition: all 0.15s ease 0.15s;
+								background-color: $sgit-pink;
+								transform: scaleX(0);
+								transform-origin: center;
+							}
+							&:hover.profile__details__name__link::before {
+								transform: scaleY(1);
+								transition: transform 0.15s ease 0.3s;
+							}
+							&:hover.profile__details__name__link::after {
+								transform: scaleX(1);
+							}
+						}
+					}
+				}
+
+				&__job-title {
+					font-weight: 400;
+					margin-bottom: 0.5rem;
+
+					@include media-breakpoint-up(md) {
+						color: $black-200;
+					}
+				}
+
+				&__social-icons {
+					display: flex;
+					justify-content: center;
+
+					& .profile__social-link span {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						border: 1px solid #e6dfe2;
+						border-radius: 100%;
+						padding: 10px;
+					}
+
+					& .profile__social-link + .profile__social-link {
+						margin-left: 1.25rem;
+					}
+
+					#linkedin-icon,
+					#email-icon {
+						height: 1.1rem;
+					}
+
+					& .linkedin,
+					.email {
+						width: 2.5rem;
+						height: 2.5rem;
+						line-height: 1;
+					}
+
+					& .profile__social-link {
+						transition: all 0.2s ease;
+						border-radius: 100%;
+
+						&:hover {
+							transform: scale(1.02) translateY(-1px);
+							background-color: $sgit-pink;
+							box-shadow: 0 1px 10px rgba($black-900, 0.2);
+						}
+						&:hover #linkedin-icon .linkedin-icon-color,
+						&:hover #email-icon .email-icon-color {
+							fill: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-bottom: 1.25rem;
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding: 4rem 0;
+	}
 }
